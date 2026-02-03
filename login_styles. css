@@ -1,0 +1,270 @@
+/* ===== RESET ===== */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  width: 100%;
+  min-height: 100vh;
+  background-image: url(IMGs/AI.jpg);
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  color: white;
+}
+
+/* ===== NAV ===== */
+nav {
+  padding: 10px;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  backdrop-filter: blur(80px);
+  font-size: clamp(22px, 3vw, 36px);
+  color: rgb(103, 7, 167);
+}
+
+nav img.logo {
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+}
+
+.login-btn {
+  cursor: pointer;
+  border: 2px solid white;
+  padding: 8px 15px;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.login-btn:hover {
+  background-color: rgb(81, 236, 81);
+}
+
+/* ===== MAIN CONTENT ===== */
+main {
+  padding: 30px;
+}
+
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.content .main-img {
+  width: 50%;
+  max-width: 520px;
+  border-radius: 10px;
+}
+
+.info {
+  text-align: right;
+  flex: 1;
+}
+
+.info h1.h1 {
+  font-size: clamp(36px, 6vw, 80px);
+  background: linear-gradient(
+    90deg,
+    rgb(197, 28, 169),
+    rgb(191, 8, 236),
+    rgb(7, 157, 245),
+    rgb(157, 211, 96)
+  );
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.info p {
+  font-size: clamp(16px, 2.5vw, 22px);
+}
+
+/* ===== CLIENTS ===== */
+.clients {
+  margin: 50px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+  flex-wrap: wrap;
+  backdrop-filter: blur(30px);
+  border-radius: 30px;
+  padding: 20px;
+}
+
+.clients > div {
+  flex: 1;
+  text-align: center;
+}
+
+.clients h1 {
+  font-size: clamp(24px, 4vw, 48px);
+}
+
+.clients h3 {
+  font-size: clamp(12px, 2vw, 18px);
+  opacity: 0.85;
+}
+
+/* ===== JOIN NOW ===== */
+.join {
+  text-align: center;
+  margin: 20px 0;
+}
+
+/* ===== FOOTER ===== */
+footer {
+  background: rgb(37, 35, 35);
+  padding: 20px 0;
+}
+
+.icons {
+  display: flex;
+  justify-content: center;
+  font-size: 30px;
+  gap: 30px;
+}
+
+.icon:hover {
+  color: rgb(252, 174, 7);
+}
+
+/* ===== POPUP ===== */
+.POP_UP {
+  display: none;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 100%;
+  height: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(10px);
+  z-index: 9999;
+  display:none;
+  justify-content: center;
+  align-items: center;
+}
+
+.login-wrapper {
+  width:50%;
+  background: linear-gradient(135deg, #ff512f, #dd2476);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  text-align: center;
+}
+
+.login-form h1 {
+  font-size: clamp(24px, 6vw, 32px);
+  margin-bottom: 30px;
+  color: #fff;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 25px;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 14px 15px;
+  border-radius: 10px;
+  border: none;
+  background: rgba(255,255,255,0.2);
+  color: #fff;
+  font-size: 16px;
+  outline: none;
+}
+
+.input-group label {
+  position: absolute;
+  top: 50%;
+  left: 15px;
+  transform: translateY(-50%);
+  color: #eee;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+
+.input-group input:focus + label,
+.input-group input:valid + label {
+  top: -8px;
+  left: 10px;
+  font-size: 12px;
+  background: rgba(0,0,0,0.2);
+  padding: 0 5px;
+  border-radius: 5px;
+}
+
+.login-form button {
+  width: 100%;
+  padding: 14px;
+  border: none;
+  border-radius: 10px;
+  background: linear-gradient(90deg, #ff512f, #dd2476);
+  color: #fff;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.login-form button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.3);
+}
+
+.options {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.options a {
+  color: #fff;
+  text-decoration: none;
+}
+
+.options a:hover {
+  color: #ffdd00;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .content {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .content .main-img {
+    width: 90%;
+    margin: 0 auto;
+  }
+
+  .info {
+    text-align: center;
+  }
+
+  .clients {
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+@media (max-width: 480px) {
+  nav {
+    flex-direction: column;
+    gap: 10px;
+  }
+  .login-wrapper {
+    padding: 30px 20px;
+  }
+}
