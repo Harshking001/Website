@@ -1,67 +1,95 @@
 <!DOCTYPE html>
-   <head>
-    <title>Rock Paper Scissors</title
-   </head>
-   <html>
-     <body>
-        <style>
-           button{
-              height :100px;
-              widths:100px;
-              border-radius:50%;
-              background-color:green;
-        </style>
-<input type=number id=score readonly value=1>
-<p id=ans></p>
-<button onclick=rock()>Rock</button>
-<button onclick=paper()>Paper</button>
-<button onclick=scissors()>Scissors</button>
-     <script>
-   var p=document.querySelector("#ans");
-   var Cc= Math.random()*15;
-   var I=document.querySelector("#score");
-   function rock(){
-   if (Cc<5){ 
-   p.innerText="Computer Move = Rock \n You Tied";
-   Cc=Math.random()*15;
-   }else if (Cc<10){
-   p.innerText="Computer Move = Paper \n You Losed 😭";
-   I.value--;
-   Cc=Math.random();}
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login page</title>
+  <link rel="shortcut icon" href="IMGs/watch_logo.jpg" type="image/x-icon">
+  <link rel="stylesheet" href="login_styles.css">
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+  >
+</head>
+<body>
+  <header>
+    <nav>
+      <img class="logo" src="IMGs/watch_logo.jpg" alt="logo">
+      <div class="login-btn" onclick="pop_up()">
+        <h1><i class="bi bi-person-fill"></i> Login</h1>
+      </div>
+    </nav>
+  </header>
 
-   else{
-   p.innerText="Computer Move = Scissors \n You Won 😊";
-   I.value++;
-   Cc=Math.random();}}
-   
-   function paper(){
-   if (Cc<5){ 
-   p.innerText="Computer Move = Rock \n You Won 😊";
-   I.value++;
-   Cc=Math.random()*15;
-   }else if (Cc<10){
-   p.innerText="Computer Move = Paper \n You Tied";
-   Cc=Math.random();}
-   else{
-   p.innerText="Computer Move = Scissors \n You Losed 😭";
-   I.value--;
-   Cc=Math.random();}}
-   function scissors(){
-   if (Cc<5){ 
-   p.innerText="Computer Move = Rock \n You Losed 😭";
-   I.value--;
+  <main>
+    <div class="content">
+      <img src="IMGs/VR.jpg" alt="VR" class="main-img">
+      <div class="info">
+        <h1 class="h1">Watch & Earn</h1>
+        <p>You earn by just watching videos on YouTube, TikTok, and more easy ways of making money.</p>
+      </div>
+    </div>
 
-   Cc=Math.random()*15;
-   }else if (Cc<10){
-   p.innerText="Computer Move = Paper \n You Won 😊";
-   I.value++;
-   Cc=Math.random();}
-   else{
-   p.innerText="Computer Move = Scissors \n You Tied";
-   Cc=Math.random();}}
+    <div class="clients">
+      <div>
+        <h1 class="h1">250k+</h1>
+        <h3>clients earning money</h3>
+      </div>
+      <div>
+        <h1 class="h1">$400+</h1>
+        <h3>estimated earning</h3>
+      </div>
+      <div>
+        <h1 class="h1">250k+</h1>
+        <h3>clients earning money</h3>
+      </div>
+    </div>
 
-     </script>
-     
-     </body>
-   
-   </html>
+    <div class="join">
+      <div class="login-btn" onclick="pop_up()">Join now <i class="bi bi-box-arrow-in-right"></i></div>
+    </div>
+  </main>
+
+  <footer>
+    <div class="footer">
+      <div class="media">
+        <h2>Follow us on:</h2>
+        <div class="icons">
+          <div class="icon"><i class="bi bi-facebook"></i></div>
+          <div class="icon"><i class="bi bi-twitter-x"></i></div>
+          <div class="icon"><i class="bi bi-instagram"></i></div>
+          <div class="icon"><i class="bi bi-tiktok"></i></div>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Login Popup -->
+  <div class="POP_UP">
+    <div class="login-wrapper">
+      <form class="login-form">
+        <h1>Welcome Back</h1>
+
+        <div class="input-group">
+          <input type="text" required>
+          <label>Username</label>
+        </div>
+
+        <div class="input-group">
+          <input type="password" required>
+          <label>Password</label>
+        </div>
+
+        <button type="submit">Login</button>
+
+        <div class="options">
+          <a href="#">Forgot Password?</a>
+          <a href="#">Sign Up</a>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
